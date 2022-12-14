@@ -9,6 +9,9 @@ with open("Day1/input.txt", "r") as f:
         else:
             current_pack.append(int(line))
         line = f.readline()
+    packs.append(current_pack)
 
-sol = max(map(sum, packs))
-print(f"Most calories by any elf: {sol}")
+sol1 = max(map(sum, packs))
+print(f"Most calories by any elf: {sol1}")
+sol2 = sum(sorted(list(map(sum, packs)))[-3:])
+print(f"Calories carried by top three elves: {sol2}")
