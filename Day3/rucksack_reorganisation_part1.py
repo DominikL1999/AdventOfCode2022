@@ -1,5 +1,3 @@
-rucksacks = open("Day3/input.txt", "r").readlines()
-
 def same_item(s1, s2):
     for item in s1:
         if item in s2:
@@ -14,6 +12,8 @@ def get_priority(item: str):
         return o - (ord("A") - 1) + 26
     else:
         raise ValueError()
+
+rucksacks = open("Day3/input.txt", "r").readlines()
 
 sum_prios = 0
 for rucksack in rucksacks:
